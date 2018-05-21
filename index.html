@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <Title>Rupee Collector</Title>
+
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="assets/javascript/game.js"></script>
+
+    </head>
+
+    <body>
+    
+        <div>
+            <h1>Rupee Collector</h1>
+        </div>
+
+        
+        <div id=instructions>
+            <p>You will be given a random number at the start of the game.</p>
+            <p>There are four crystals below. By click on a crystal, you will add a specific amount of points to your score.</p>
+            <p>You win the game by matching your total score to a random number. You lose the game if your total score goes above the random number.</p>
+            <p>The value of each crystal is hidden from you until you click on it.</p>
+            <p>Each time the game starts, the game will change the values of each crystal.</p>
+        </div>
+
+     
+    <div id="thirdRow">
+        <div id="randomNumber">
+            34
+            <!-- Random number from JS -->
+        </div>
+            
+        <div id="winsLosses">
+            <span id=winOrLoseMessage></span>
+            <p>Wins:&nbsp</p><span id="winCount"></span>
+            <p>Losses:&nbsp</p><span id="lossCOunt"></span>
+        </div>
+    </div>
+
+
+    <div class="crystals">
+        <img src="assets/images/green.png" alt="Green Rupee">
+        <img src="assets/images/pink.png" alt="Pink Rupee">
+        <img src="assets/images/orange.png" alt="Orange Rupee">
+        <img src="assets/images/purple.png" alt="Purple Rupee">
+    </div>
+
+    <div id="scoreBox1">
+        Your total score is:
+        <span id="totalScore"><!--Score generated from JS--></span>
+    </div>
+    
+    <div id="scoreBox2">
+        <span id="scoreNumbers"> blah blah </span>  <!--Will be overwritten when score is updated.-->
+    </div>
+
+    </body>
+
+</html>

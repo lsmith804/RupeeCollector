@@ -1,0 +1,70 @@
+
+
+body {
+    background-color: lightcoral;
+}
+
+
+h1 {
+    color: white;
+    background-color: orangered;
+    border-color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 20px;
+    width: 25%;
+    
+}
+
+#instructions {
+    background-color: sandybrown;
+    color: green;
+    padding: 2% 1% 2% 1%;
+    width: 50%;
+
+}
+
+#thirdRow {
+    width: 50%;
+}
+
+#randomNumber {
+    background-color: green;
+    font-size: 20px;
+    float: left;
+    width: 25%;
+    height: 20%;
+    border: 0px solid white;
+}
+
+#winsLosses {
+    background-color: cyan;
+    float: left;
+    width: 25%;
+    height: 20%;
+    border: 0px solid white;
+}
+
+.crystals {
+    border-style: outset;
+    clear: both;
+    width: 50%;
+}
+
+img {
+    width: 50px;
+    
+}
+
+#scoreBox1 {
+    background-color: seagreen;
+    width: 25%;
+    clear: both;
+}
+
+#scoreBox2 {
+    background-color: seagreen;
+    font-size: 20px;
+    width: 25%;
+    clear: both;
+}
