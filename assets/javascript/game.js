@@ -17,20 +17,23 @@ var winsLosses;
 
 //begin a new game
 $(document).ready(function() {
-console.log(wins);
+console.log(randomNumber);
 
     $("#greenButton").on("click", function () {
-        console.log(randomNumber + "green button works");
+        console.log(green);
     });
 
+    $("#pinkButton").on("click", function () {
+        console.log(pink);
+    });
+
+    $("#orangeButton").on("click", function () {
+        console.log(orange);
+    });
+
+    $("#purpleButton").on("click", function () {
+        console.log(purple);
+    });
 
 });
 
-//Begin a new game
-function newGame() {
-    var variable = "ny name is Lori";
-    console.log(randomNumber);
-    console.log(variable);
-}
-
-newGame();
