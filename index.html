@@ -5,14 +5,15 @@
 
         <link rel="stylesheet" href="assets/css/reset.css">
         <link rel="stylesheet" href="assets/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="assets/javascript/game.js"></script>
 
     </head>
 
     <body>
     
-        <div>
-            <h1>Rupee Collector</h1>
+        <div id="banner">
+            Rupee Collector
         </div>
 
         
@@ -26,9 +27,8 @@
 
      
     <div id="thirdRow">
-        <div id="randomNumber">
-            34
-            <!-- Random number from JS -->
+        <div id="something">
+            <span id="randomNumber"></span>
         </div>
             
         <div id="winsLosses">
@@ -40,10 +40,10 @@
 
 
     <div class="crystals">
-        <img src="assets/images/green.png" alt="Green Rupee">
-        <img src="assets/images/pink.png" alt="Pink Rupee">
-        <img src="assets/images/orange.png" alt="Orange Rupee">
-        <img src="assets/images/purple.png" alt="Purple Rupee">
+        <button type="button" id="greenButton"><img src="assets/images/green.png" alt="Green Rupee"></button>
+        <button type="button" id="pinkButton"><img src="assets/images/pink.png" alt="Pink Rupee"></button>
+        <button type="button" id="orangeButton"><img src="assets/images/orange.png" alt="Orange Rupee"></button>
+        <button type="button" id="purpleButton"><img src="assets/images/purple.png" alt="Purple Rupee"></button>
     </div>
 
     <div id="scoreBox1">
@@ -52,7 +52,7 @@
     </div>
     
     <div id="scoreBox2">
-        <span id="scoreNumbers"> blah blah </span>  <!--Will be overwritten when score is updated.-->
+        <span id="scoreNumbers"> SCORE WILL APPEAR HERE </span>  <!--Will be overwritten when score is updated.-->
     </div>
 
     </body>
