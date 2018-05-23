@@ -15,12 +15,20 @@ var wins = 0;
 var losses = 0;
 var winsLosses;
 
-//begin a new game
+var totalScore = 0;
+
+//Begin a new game
 $(document).ready(function() {
 console.log(randomNumber);
+$("#totalScore").append(totalScore);
+$("#randomNumber").append(randomNumber);
 
+    //Generate random values for each rupee
     $("#greenButton").on("click", function () {
         console.log(green);
+        //add this to totalScore
+        var newtotal1 = totalScore + green;
+        console.log(newtotal1);
     });
 
     $("#pinkButton").on("click", function () {
@@ -34,6 +42,17 @@ console.log(randomNumber);
     $("#purpleButton").on("click", function () {
         console.log(purple);
     });
+
+
+    //Add values of the rupees together
+    $(".button").on("click", function() {
+
+    });
+
+    //If statement needed to reset game if randomNumber is exceeded or met
+    if (totalScore < randomNumber) {
+        console.log("keep adding");
+    }
 
 });
 
