@@ -4,7 +4,7 @@ div {
 }
 
 body {
-    background-color: lightcoral;
+    background-color: black;
 }
 
 
@@ -64,6 +64,11 @@ img {
     padding: 5px;
     background: white;
     
+}
+
+#link {
+    width: 300px;
+    margin: 1%;
 }
 
 #scoreBox1 {
