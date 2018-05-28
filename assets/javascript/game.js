@@ -14,14 +14,28 @@ var purple = Math.floor(Math.random() * 13) + 1;
 var wins = 0;
 var losses = 0;
 var winsLosses;
+var totalScore;
 
 
 //Begin a new game
 $(document).ready(function() {
-    var totalScore = 0;
+    newGame();
+    function newGame() {
+    totalScore = 0;
 
     $("#totalScore").append(totalScore);
     $("#randomNumber").append(randomNumber);
+    
+    if (totalScore === randomNumber) {
+        alert("You win!");
+    }
+    
+    if (totalScore > randomNumber) {
+        alert("LOSER");
+        newgame();
+    }
+
+
 
     if (totalScore < randomNumber) { 
 
@@ -30,11 +44,8 @@ $(document).ready(function() {
             console.log(green);
             totalScore = totalScore + green;
             $("#totalScore").html(totalScore);
-            //if (totalScore > randomNumber) {
-                //console.log("STOP!");
-
-
-    
+            if (totalScore === randomNumber) {
+                alert("You win!");
             }
         });
 
@@ -58,23 +69,24 @@ $(document).ready(function() {
         });
 
 
-        //Add values of the rupees together
-        $("button").on("click", function() {
-            console.log("Your new total is "+ totalScore + ", so keep adding");
+        //Check for win/loss
 
+        $("button").on("click", function() {
+            if (totalScore === randomNumber) {
+                alert("You win!");
+        }
+
+            if(totalScore > randomNumber) {
+                alert("You lose!");
+
+            }
         });
 
-        if (totalScore > randomNumber) {
-            $("button").on("click", function() {
-            console.log("STOP!");
-            });
 
-        }
+        
     } 
 
-
     //If statement needed to reset game if randomNumber is exceeded or met
-
+}
 
 });
-
