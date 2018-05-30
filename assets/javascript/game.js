@@ -75,7 +75,7 @@ $(document).ready(function() {
             if (totalScore === randomNumber) {
                 alert("YOU WIN");
                 winOne();
-        }
+            }   
 
             if(totalScore > randomNumber) {
                 loseOne();

@@ -66,6 +66,10 @@ img {
     
 }
 
+ #purpleButton {
+    display: absolute;
+}
+
 #link {
     width: 300px;
     margin: 1%;
