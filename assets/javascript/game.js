@@ -14,28 +14,30 @@ function loseOne() {
     losses++;
     $("#lossCount").html(losses);
     alert("Sorry. Try again!");
+    totalScore = 0;
 }
 
 function winOne() {
     wins++;
     $("#winCount").html(wins);
     alert("Yay! You won!");
+    totalScore = 0;
     
 }
 
 function newGame() {
     // Store a random value between 19 and 120
     var randomNumber = [Math.floor(Math.random() * 121) + 19];
-    console.log("the new random number is" + randomNumber);
-    $("#randomNumber").text(randomNumber);
+    console.log("the current random number is" + randomNumber);
 
 
 
 //Begin a new game
 $(document).ready(function() {
-    $("#totalScore").append(totalScore);
-    $("#winCount").append(wins);
-    $("#lossCount").append(losses);
+    $("#randomNumber").text(randomNumber);
+    $("#totalScore").text(totalScore);
+    $("#winCount").text(wins);
+    $("#lossCount").text(losses);
     
     if (totalScore < randomNumber) { 
 
@@ -71,14 +73,14 @@ $(document).ready(function() {
         //Check for win/loss
         $("button").on("click", function() {
             if (totalScore === randomNumber) {
-                alert("You win!");
+                alert("YOU WIN");
                 winOne();
         }
 
             if(totalScore > randomNumber) {
                 loseOne();
                 newGame();
-                alert("You lose and newGame Function called");
+                alert("YOU LOSE");
             }
         });
 
