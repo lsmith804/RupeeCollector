@@ -62,24 +62,27 @@ $(document).ready(function() {
         });
 
         $("#purpleButton").on("click", function () {
+            console.log(purple);
             totalScore = totalScore + purple;
             $("#totalScore").html(totalScore);
-            console.log(purple);
-            console.log("purple clicked");
+            
         });
 
 
         //Check for win/loss
         $("button").on("click", function() {
+            
             if (totalScore === randomNumber) {
                 alert("YOU WIN");
                 winOne();
+                newGame();
             }   
 
             if(totalScore > randomNumber) {
+                alert("YOU LOSE");
                 loseOne();
                 newGame();
-                alert("YOU LOSE");
+                
             }
         });
 
