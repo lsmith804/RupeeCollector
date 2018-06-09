@@ -13,14 +13,12 @@ var totalScore = 0;
 function loseOne() {
     losses++;
     $("#lossCount").html(losses);
-    alert("Sorry. Try again!");
     totalScore = 0;
 }
 
 function winOne() {
     wins++;
     $("#winCount").html(wins);
-    alert("Yay! You won!");
     totalScore = 0;
     
 }
@@ -67,6 +65,7 @@ $(document).ready(function() {
             totalScore = totalScore + purple;
             $("#totalScore").html(totalScore);
             console.log(purple);
+            console.log("purple clicked");
         });
 
 
