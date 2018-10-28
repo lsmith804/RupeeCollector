@@ -2,55 +2,60 @@
     <head>
         <meta charset="UTF-8">
         <Title>Rupee Collector</Title>
-
         <link rel="stylesheet" href="assets/css/reset.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="assets/javascript/game.js"></script>
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     </head>
 
     <body>
-    
-        <div id="banner">
-            Rupee Collector
+        <nav>
+            <div class="nav-wrapper brown">
+                <div class="brand-logo">Rupee Collector</div>
+            <ul class="right">
+                <li><a href="https://github.com/LonLonRancher/RupeeCollector" target="_blank"><i class="fab fa-github-alt"></i> GitHub Code</a></li>
+                <li><a href="https://lonlonrancher.github.io/Portfolio/"><i class="fas fa-undo"></i> Return to Lori's Portfolio</a></li>
+            </ul>
         </div>
+        </nav>
+                    
+        <div class="container">
+            <div class="row light-green lighten-3">
+                <div class="col s6"><img id="link" src="assets/images/link.jpg">
+                </div>
+                <div class="col s6 text-green-darken-4">
+                    <h5>Link has given you a random number. Try to match this number by clicking on a rupee. How much is each worth? That's a secret. Do your best to add them up and match Link's number!</h5>
+                    <h6>Hint: Link's number will change with each new round.</h6>
+                </div>
+            </div>
 
-        <img id="link" src="assets/images/link.jpg">
-        
-        <div id=instructions>
-            <p>Link will give you a random number at the start of the game.There are four rupees below. By clicking on a rupee, you will add a specific value to your score. You win the game by matching your total score to a random number. You lose the game if your total score goes above the random number.</p>
-            <p>The value of each rupee is hidden from you until you click on it. Each time the game starts, the game will change the values of each rupee. Good luck!</p>
-        </div>
-
-     
-    <div id="thirdRow">
-        <span id="randomNumber">RANDOM!</span>
-        
+            <div class="row">
+                <div class="col s6">
+                    <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Link's Number: <span id="randomNumber"></span></span>
+                        <span class="card-title">Your Total So Far: <span id="totalScore"></span></span>              
+                    </div>
+                    <div class="card-action">
+                        <span class="card-title">Wins: <span id="winCount"></span></span><br>
+                        <span class="card-title">Losses: <span id="lossCount"></span></span> 
+                    </div>
+                    </div>
+                </div>
             
-        <div id="winsLosses">
-            <span id=winOrLoseMessage></span>
-            <p>Wins:&nbsp</p><span id="winCount"></span>
-            <p>Losses:&nbsp</p><span id="lossCount"></span>
+                <div class="col s6">
+                    <div class="container">
+                        <button type="button" id="greenButton" class="hoverable"><img src="assets/images/green.png" alt="Green Rupee"></button>
+                        <button type="button" id="pinkButton" class="hoverable"><img src="assets/images/pink.png" alt="Pink Rupee"></button>
+                        <button type="button" id="orangeButton" class="hoverable"><img src="assets/images/orange.png" alt="Orange Rupee"></button>
+                        <button type="button" id="purpleButton" class="hoverable"><img src="assets/images/purple.png" alt="Purple Rupee"></button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-
-    <div class="crystals">
-        <button type="button" id="greenButton"><img src="assets/images/green.png" alt="Green Rupee"></button>
-        <button type="button" id="pinkButton"><img src="assets/images/pink.png" alt="Pink Rupee"></button>
-        <button type="button" id="orangeButton"><img src="assets/images/orange.png" alt="Orange Rupee"></button>
-        <button type="button" id="purpleButton"><img src="assets/images/purple.png" alt="Purple Rupee"></button>
-    </div>
-
-    <div id="scoreBox1">
-        Your total score is:
-    </div>
-    
-    <div id="scoreBox2">
-        <span id="totalScore"> <!--Will be overwritten when score is updated.--> </span>  
-    </div>
-
     </body>
-
+</div>
 </html>
